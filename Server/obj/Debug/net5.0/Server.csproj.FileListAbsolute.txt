@@ -1,0 +1,16 @@
+D:\Coding\TcpCommunication\Server\bin\Debug\net5.0\Server.exe
+D:\Coding\TcpCommunication\Server\bin\Debug\net5.0\Server.deps.json
+D:\Coding\TcpCommunication\Server\bin\Debug\net5.0\Server.runtimeconfig.json
+D:\Coding\TcpCommunication\Server\bin\Debug\net5.0\Server.runtimeconfig.dev.json
+D:\Coding\TcpCommunication\Server\bin\Debug\net5.0\Server.dll
+D:\Coding\TcpCommunication\Server\obj\Debug\net5.0\Server.csproj.AssemblyReference.cache
+D:\Coding\TcpCommunication\Server\obj\Debug\net5.0\Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\TcpCommunication\Server\obj\Debug\net5.0\Server.AssemblyInfoInputs.cache
+D:\Coding\TcpCommunication\Server\obj\Debug\net5.0\Server.AssemblyInfo.cs
+D:\Coding\TcpCommunication\Server\obj\Debug\net5.0\Server.csproj.CoreCompileInputs.cache
+D:\Coding\TcpCommunication\Server\obj\Debug\net5.0\Server.dll
+D:\Coding\TcpCommunication\Server\obj\Debug\net5.0\ref\Server.dll
+D:\Coding\TcpCommunication\Server\obj\Debug\net5.0\Server.pdb
+D:\Coding\TcpCommunication\Server\obj\Debug\net5.0\Server.genruntimeconfig.cache
+D:\Coding\TcpCommunication\Server\bin\Debug\net5.0\ref\Server.dll
+D:\Coding\TcpCommunication\Server\bin\Debug\net5.0\Server.pdb

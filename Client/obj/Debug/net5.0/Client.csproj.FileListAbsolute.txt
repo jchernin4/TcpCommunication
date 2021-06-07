@@ -1,0 +1,16 @@
+D:\Coding\TcpCommunication\Client\bin\Debug\net5.0\Client.exe
+D:\Coding\TcpCommunication\Client\bin\Debug\net5.0\Client.deps.json
+D:\Coding\TcpCommunication\Client\bin\Debug\net5.0\Client.runtimeconfig.json
+D:\Coding\TcpCommunication\Client\bin\Debug\net5.0\Client.runtimeconfig.dev.json
+D:\Coding\TcpCommunication\Client\bin\Debug\net5.0\Client.dll
+D:\Coding\TcpCommunication\Client\bin\Debug\net5.0\ref\Client.dll
+D:\Coding\TcpCommunication\Client\bin\Debug\net5.0\Client.pdb
+D:\Coding\TcpCommunication\Client\obj\Debug\net5.0\Client.csproj.AssemblyReference.cache
+D:\Coding\TcpCommunication\Client\obj\Debug\net5.0\Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\TcpCommunication\Client\obj\Debug\net5.0\Client.AssemblyInfoInputs.cache
+D:\Coding\TcpCommunication\Client\obj\Debug\net5.0\Client.AssemblyInfo.cs
+D:\Coding\TcpCommunication\Client\obj\Debug\net5.0\Client.csproj.CoreCompileInputs.cache
+D:\Coding\TcpCommunication\Client\obj\Debug\net5.0\Client.dll
+D:\Coding\TcpCommunication\Client\obj\Debug\net5.0\ref\Client.dll
+D:\Coding\TcpCommunication\Client\obj\Debug\net5.0\Client.pdb
+D:\Coding\TcpCommunication\Client\obj\Debug\net5.0\Client.genruntimeconfig.cache
