@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
+
+// ReSharper disable ArrangeObjectCreationWhenTypeEvident
 
 namespace Server {
-    [SuppressMessage("ReSharper", "ArrangeObjectCreationWhenTypeEvident")]
     public class Program {
-        public class StateObject {
+        private class StateObject {
             public byte[] buffer;
             public Socket socket;
         }
@@ -19,10 +20,8 @@ namespace Server {
             Socket listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             listener.Bind(new IPEndPoint(IPAddress.Any, 4342));
             listener.Listen(10);
-            while (true) {
-                listener.BeginAccept(AcceptCallback, listener);
-                Thread.Sleep(5000);
-            }
+
+            listener.BeginAccept(AcceptCallback, listener);
         }
 
         private static void AcceptCallback(IAsyncResult ar) {
@@ -36,6 +35,8 @@ namespace Server {
                 so.socket = handler;
                 so.buffer = new byte[5];
                 handler.BeginReceive(so.buffer, 0, so.buffer.Length, 0, ReceiveCallback, so);
+                
+                listener.BeginAccept(AcceptCallback, listener);
             }
         }
 
