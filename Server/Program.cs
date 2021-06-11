@@ -2,8 +2,6 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 // ReSharper disable ArrangeObjectCreationWhenTypeEvident
 
@@ -29,7 +27,7 @@ namespace Server {
             if (listener != null) {
                 Socket handler = listener.EndAccept(ar);
 
-                Console.WriteLine("Client connected HERE");
+                Console.WriteLine("Client connected");
 
                 StateObject so = new StateObject();
                 so.socket = handler;

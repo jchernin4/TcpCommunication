@@ -22,7 +22,7 @@ namespace Client {
             
             Console.WriteLine("Connected!");
             while (true) {
-                byte type = (byte) 1;
+                byte type = 1;
                 byte[] textBytes = Encoding.ASCII.GetBytes("This is a test!");
                 byte[] length = BitConverter.GetBytes(textBytes.Length);
                 byte[] final = new byte[5 + textBytes.Length];
