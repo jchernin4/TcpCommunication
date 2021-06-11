@@ -32,6 +32,11 @@ namespace Client {
         
         private static void ReceiveCallback(IAsyncResult ar) {
             Socket socket = (Socket)ar.AsyncState;
+
+            if (!socket.Connected) {
+                return;
+            }
+            
             int bytesRead = socket.EndReceive(ar);
             if (bytesRead > 0) {
                 byte type = buffer[0];
@@ -78,6 +83,7 @@ namespace Client {
                     
                     default:
                         Console.WriteLine("Unknown type " + type);
+                        socket.Disconnect(false);
                         break;
                 }
 

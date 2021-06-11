@@ -56,6 +56,20 @@ namespace Server {
                             }
                             break;
                         
+                        case "3":
+                            type = 3;
+                            textBytes = Encoding.ASCII.GetBytes("Text for type 3!");
+                            length = BitConverter.GetBytes(textBytes.Length);
+                            final = new byte[5 + textBytes.Length];
+                            final[0] = type;
+                            Array.Copy(length, 0, final, 1, 4);
+                            Array.Copy(textBytes, 0, final, 5, textBytes.Length);
+
+                            foreach (Socket socket in clientList) {
+                                socket.Send(final);
+                            }
+                            break;
+                        
                         default:
                             break;
                     }
@@ -109,6 +123,8 @@ namespace Server {
                     
                     default:
                         Console.WriteLine("Unknown type " + type);
+                        so.socket.Disconnect(false);
+                        clientList.Remove(so.socket);
                         break;
                 }
 
