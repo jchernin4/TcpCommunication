@@ -91,6 +91,7 @@ namespace Server {
                 Console.WriteLine("Type " + type);
                 Console.WriteLine("Length " + length);
                 
+                // Kept separate to show that you can do different things when receiving each type
                 switch (type) {
                     case 1:
                         so.buffer = new byte[length];
