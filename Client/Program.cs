@@ -9,24 +9,33 @@ namespace Client {
     public class Program {
         private static byte[] buffer;
         public static void Main(string[] args) {
-            buffer = new byte[5];
-            Console.WriteLine("Starting...");
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            try {
+                buffer = new byte[5];
+                Console.WriteLine("Starting...");
+                Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-            while (!socket.Connected) {
-                try {
-                    socket.Connect(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 4342));
-                } catch (Exception) {
-                    // ignored
+                while (!socket.Connected) {
+                    try {
+                        socket.Connect(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 4342));
+                    } catch (Exception) {
+                        // ignored
+                    }
+
+                    Thread.Sleep(5000);
                 }
-                Thread.Sleep(5000);
-            }
 
-            socket.BeginReceive(buffer, 0, buffer.Length, 0, ReceiveCallback, socket);
-            
-            Console.WriteLine("Connected!");
-            while (true) {
+                socket.BeginReceive(buffer, 0, buffer.Length, 0, ReceiveCallback, socket);
+
+                Console.WriteLine("Connected!");
+                while (true) {
+                    if (!socket.Connected) {
+                        throw new Exception();
+                    }
+                }
                 
+            } catch (Exception) {
+                Thread.Sleep(5000);
+                Main(new string[0]);
             }
         }
         
